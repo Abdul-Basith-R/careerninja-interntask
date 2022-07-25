@@ -7,9 +7,7 @@ app = Flask(__name__)
 @app.route('/', methods =["GET", "POST"])
 def home():
     if request.method == "POST":
-           # getting input with name = fname in HTML form
        sentence1 = request.form.get("s1")
-       # getting input with name = lname in HTML form
        sentence2 = request.form.get("s2")
        embedding_1 = model.encode(sentence1, convert_to_tensor=True)
        embedding_2 = model.encode(sentence2, convert_to_tensor=True)

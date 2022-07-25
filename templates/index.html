@@ -7,3 +7,10 @@
     This basically returns a string as similarity score.
     To pass the list just after the link, route to /request/"list"
 </h2>
+
+<form action="{{ url_for("home")}}" method="post">
+    <label for="sentence1">Sentence 1</label>
+    <input type="text" id="Sentence1" name="s1" placeholder="Enter the sentence">
+    <label for="sentence2">Sentence 2</label>
+    <input type="text" id="Sentence2" name="s2" placeholder="Enter the sentence">
+    <button type="submit">Calculate Similarity</button>
